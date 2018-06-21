@@ -1,0 +1,32 @@
+Metadata-Version: 1.1
+Name: logger-utils
+Version: 0.0.1
+Summary: A sime logger util function
+Home-page: UNKNOWN
+Author: kamals
+Author-email: kamal@example.com
+License: UNKNOWN
+Description: ## Logger Util packages
+        
+        ## log_time 
+        decorator to log time taken to execute a function.
+        ### usage
+        ```
+        @log_time
+        def fun():
+            print "hellow world"
+        ```
+        
+        ## log_input_output
+        decorator to log input and output of function.
+        ### usage
+        ```
+        @log_input_output
+        def fun():
+            print "hellow world"
+        ```
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
