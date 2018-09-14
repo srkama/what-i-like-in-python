@@ -11,33 +11,36 @@ def my_func():
 ## with xrange
 @profile
 def get_square_of_all(n):
-    for i in xrange(n):
-        print(i**2)
+    for i in range(n):
+        print(i ** 2)
+
 
 # with range not a generator function
 @profile
 def get_square_of_all_range(n):
     for i in range(n):
-        print(i**2)
+        print(i ** 2)
 
 
-#generator function to function to return only even numbers
+# generator function to function to return only even numbers
 @profile
 def get_even_number(n):
     i = 0
     while True:
         i += 2
         if i > n:
-            return 
+            return
         else:
             yield i
+
 
 @profile
 def print_even_numbers(n):
     for i in get_even_number(n):
-         x = i
+        x = i
 
-#simple test generator function
+
+# simple test generator function
 def test_generator_func():
     yield "calling test_generator_func - 1"
     yield "calling test_generator_func - 2"
@@ -47,25 +50,19 @@ def test_generator_func():
     yield "calling test_generator_func - 6"
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     my_func()
     get_square_of_all(10)
     get_square_of_all_range(10)
-    print_even_numbers(10)   
-    print_even_numbers(100000)    
+    print_even_numbers(10)
+    print_even_numbers(100000)
 
-    x  = test_generator_func()
+    x = test_generator_func()
 
-    print (next(x))
-    print (next(x))
-    print (next(x))
-    print (next(x))
-    print (next(x))
-    print (next(x))
-    print (next(x))
-
-
-
-
-
-
+    print(next(x))
+    print(next(x))
+    print(next(x))
+    print(next(x))
+    print(next(x))
+    print(next(x))
+    print(next(x))
